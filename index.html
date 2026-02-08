@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rappels d'Anniversaires</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Rappels d'Anniversaires</h1>
+            <p class="subtitle">N'oubliez jamais les dates importantes !</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="add-birthday-section">
+                <div class="card">
+                    <h2 class="card-title">Ajouter un anniversaire</h2>
+                    <form id="birthdayForm" class="form">
+                        <div class="form-group">
+                            <label for="name" class="label">Nom de la personne</label>
+                            <input type="text" id="name" name="name" class="input" required placeholder="Ex: Marie">
+                        </div>
+                        <div class="form-group">
+                            <label for="date" class="label">Date d'anniversaire</label>
+                            <input type="date" id="date" name="date" class="input" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Ajouter l'anniversaire
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="birthdays-list-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Liste des anniversaires</h2>
+                        <div class="stats">
+                            <span id="totalCount" class="stat">0 anniversaires</span>
+                            <span id="upcomingCount" class="stat">0 à venir</span>
+                        </div>
+                    </div>
+                    <div id="birthdaysList" class="birthdays-list">
+                        <div class="empty-state">
+                            <div class="empty-icon">🎈</div>
+                            <p class="empty-text">Aucun anniversaire enregistré</p>
+                            <p class="empty-subtext">Ajoutez votre premier anniversaire ci-dessus !</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">Birthday Reminders © 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
