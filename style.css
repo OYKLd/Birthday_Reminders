@@ -1,0 +1,350 @@
+:root {
+    --primary-color: #2196f3;
+    --secondary-color: #e3f2fd;
+    --accent-color: #2196f3;
+    --success-color: #4caf50;
+    --warning-color: #ffc107;
+    --danger-color: #f44336;
+    --dark-color: #2c3e50;
+    --light-color: #f5f5f5;
+    --text-color: #333;
+    --border-radius: 4px;
+    --shadow: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-hover: 0 4px 8px rgba(0,0,0,0.2);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background: white;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+}
+
+.title {
+    font-size: 28px;
+    color: var(--dark-color);
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Main */
+.main {
+    padding-bottom: 30px;
+}
+
+.add-birthday-section {
+    margin-bottom: 30px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.stats {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    background: var(--secondary-color);
+    color: var(--accent-color);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Form */
+.form {
+    display: grid;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label {
+    font-weight: bold;
+    color: var(--dark-color);
+    font-size: 14px;
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1976d2;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-danger {
+    background: var(--danger-color);
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.btn-danger:hover {
+    background: #d32f2f;
+}
+
+/* Birthdays List */
+.birthdays-list {
+    display: grid;
+    gap: 10px;
+}
+
+.birthday-item {
+    background: #fafafa;
+    border-radius: var(--border-radius);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+    border-left: 3px solid #ddd;
+}
+
+.birthday-item:hover {
+    background: #f0f0f0;
+    transform: translateX(5px);
+    box-shadow: var(--shadow);
+}
+
+.birthday-item.upcoming {
+    border-left-color: var(--warning-color);
+    background: #fff8e1;
+}
+
+.birthday-item.today {
+    border-left-color: var(--success-color);
+    background: #e8f5e8;
+}
+
+.birthday-info {
+    flex: 1;
+}
+
+.birthday-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--dark-color);
+    margin-bottom: 5px;
+}
+
+.birthday-date {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.birthday-countdown {
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.countdown-today {
+    background: var(--success-color);
+    color: white;
+}
+
+.countdown-soon {
+    background: var(--warning-color);
+    color: var(--dark-color);
+}
+
+.countdown-normal {
+    background: var(--accent-color);
+    color: white;
+}
+
+.birthday-actions {
+    display: flex;
+    gap: 5px;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+}
+
+.empty-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.empty-text {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.empty-subtext {
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Footer */
+.footer {
+    background: white;
+    padding: 15px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    margin-top: 30px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-text {
+    color: #666;
+    font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .birthday-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .birthday-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.birthday-item {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Focus styles for accessibility */
+.btn:focus,
+.input:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
